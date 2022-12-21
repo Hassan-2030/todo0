@@ -16,11 +16,13 @@ class My_ThemData {
         onError: WHITE_COLOR,
         background: GREEN_BACGROUND,
         onBackground: BLACE_COLOR,
-        surface: Colors.grey,
-        onSurface: WHITE_COLOR,
+        surface: BLACE_COLOR,
+        onSurface: BLACE_COLOR,
       ),
       appBarTheme: AppBarTheme(
           iconTheme: IconThemeData(color: WHITE_COLOR), centerTitle: false),
+      floatingActionButtonTheme:
+          FloatingActionButtonThemeData(backgroundColor: PRIMARY_COLOR),
       textTheme: TextTheme(
           headline1: TextStyle(
               fontSize: 30, fontWeight: FontWeight.bold, color: WHITE_COLOR),
