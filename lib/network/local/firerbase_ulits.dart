@@ -27,8 +27,8 @@ Future<QuerySnapshot<Task>> getTasksFromFierstore(DateTime dateTime) {
       .get();
 }
 
-Future<void> deleteTaskFromFierstore(String id) {
-  return getTaskCollection().doc(id).delete();
+Future<void> deleteTaskFromFierstore(Task task) {
+  return getTaskCollection().doc(task.id).delete();
 }
 
 Future<void> ubdateTaskFromFierstore(Task task) {

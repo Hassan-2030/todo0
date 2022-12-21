@@ -120,19 +120,31 @@ class _AddTaskBottomSheetState extends State<AddTaskBottomSheet> {
 
                     showLoading(context, 'Loading...');
 
-                    AddTaskToFierstore(task).then((value) {
-                      hideLoading(context);
-                      showMassege(context, 'Successfully', 'Added Task', 'ok',
-                          () {
-                        Navigator.pop(context);
-                        Navigator.pop(context);
-                      },
-                          isCansellabal: false,
-                          negBtn: 'Cancel',
-                          negAction: () {});
+                    AddTaskToFierstore(task);
+                    // local
+                    hideLoading(context);
+                    showMassege(context, 'Successfully', 'Added Task', 'ok',
+                        () {
+                      Navigator.pop(context);
+                      Navigator.pop(context);
+                      setState(() {});
                     });
+
+                    //   remot network
+                    //     .then((value) {
+                    //   hideLoading(context);
+                    //   showMassege(context, 'Successfully', 'Added Task', 'ok',
+                    //       () {
+                    //     Navigator.pop(context);
+                    //     Navigator.pop(context);
+                    // setState(() {});
+                    //   },
+                    //       isCansellabal: false,
+                    //       negBtn: 'Cancel',
+                    //       negAction: () {});
+                    // }
+                    // );
                   }
-                  ;
                 },
                 child: Text('add task'))
           ],
